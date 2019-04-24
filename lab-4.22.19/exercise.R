@@ -2,14 +2,19 @@ data(iris)
 View(iris)
 
 #Get all rows of Species ???versicolor??? in a new data frame. Call this data frame: ???iris.vers???
+iris.vers <- iris[iris$Species=="versioncolor", ]
 
 #Get a vector called ???sepal.dif??? with the difference between ???Sepal.Length??? and ???Sepal.Width??? of ???versicolor??? plants.
+sepal.dif <- iris.vers$Sepal.Lebgth - iris.vers$Sepal.width
 
 #Add ???iris.vers??? with the new column ???sepal.dif???.
+iris.vers$sepal.dif <- sepal.dif
 
 #filter for all data of Species ???virginica??? with a ???Sepal.Width??? of greater than 3.5.
+iris[iris$Species=="virginica" & iris$Sepal.width > 3.5, ]
 
 #get a data frame of  all data of Species ???setosa??? with a ???Sepal.Width??? of greater than 3.5, but without the last column Species in the data frame?
+
 
 #Write a function that takes in a species name as an argument and returns the average Sepal Width of that species.
 
